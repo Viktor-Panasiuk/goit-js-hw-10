@@ -21,6 +21,7 @@ body {
 
 .country-list__item {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .country__flag {
