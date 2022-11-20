@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce';
 import { fetchCountries } from './fetchCountries';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-// import templateList from './templates/list-countries.hbs';
+import templateList from './templates/list-countries.hbs';
 import templateBlock from './templates/block-country.hbs';
 
 const DEBOUNCE_DELAY = 300;
@@ -56,13 +56,13 @@ function markupOne(country) {
         languages: Object.values(country.languages),
     };
 
-    // refs.list.innerHTML = templateBlock({tmplCountryObj});
+    refs.list.innerHTML = templateBlock({tmplCountryObj});
 }
 
 function markupFew(countries) {
     markupClear();
     
-    // refs.list.innerHTML = templateList({ countries });
+    refs.list.innerHTML = templateList({ countries });
 }
 
 function markupMany() {
