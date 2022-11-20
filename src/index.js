@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import { fetchCountries } from './fetchCountries';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import templateList from './templates/list-countries.hbs';
-import templateBlock from './templates/block-country.hbs'
+import templateBlock from './templates/block-country.hbs';
 
 const DEBOUNCE_DELAY = 300;
 const NOTIFY_TIMEOUT = 2000;
@@ -66,7 +66,7 @@ function markupFew(countries) {
     markupClear();
     console.log(countries.map(country => country.name.common).join(','))
     
-    refs.list.innerHTML = templateList({countries});
+    refs.list.innerHTML = templateList({ countries });
 }
 
 function markupMany() {
