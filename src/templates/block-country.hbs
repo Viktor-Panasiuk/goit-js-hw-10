@@ -1,0 +1,22 @@
+{{#with tmplCountryObj}}
+<div class="country__caption">
+    <img class="country__flag" src="{{this.flags.svg}}" alt="">
+    <p class="country__name">{{this.name.official}}</p>
+</div>
+<p class="country__capital">
+    <span class="caption">Capital:</span>
+    {{capital}}
+</p>
+<p class="country__population">
+    <span class="caption">Population:</span>
+    {{population}}
+</p>
+
+<p class="country__languages">
+    <span class="caption">Languages:</span>
+    {{#each this.languages}}
+        {{this}}
+    {{/each}}
+</p>
+
+{{/with}}
